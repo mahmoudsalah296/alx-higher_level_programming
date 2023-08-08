@@ -4,6 +4,6 @@ for i in range(10):
         if i >= j:
             continue
         if i == 8:
-            print(f"{i}{j}")
+            print("{:d}{:d}".format(i, j))
         else:
-            print(f"{i}{j}", end=", ")
+            print("{:d}{:d}".format(i, j), end=", ")
