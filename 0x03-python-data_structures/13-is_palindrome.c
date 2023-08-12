@@ -23,7 +23,7 @@ int is_palindrome(listint_t **head)
 		return (0);
 	idx += 1;
 	len -= 1;
-	while (tail != tmp && tmp->next != tail)
+	while (len > idx)
 	{
 		tmp = tmp->next;
 		tail = tmp;
