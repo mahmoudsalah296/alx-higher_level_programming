@@ -1,6 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * is_palindrome - function to check if a list is plaindrome
  * @head: pointer to head of the list
@@ -10,7 +11,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *last = *head;
 	listint_t *beg = *head;
-	int len = 0, idx = 0;
+	int len = 1, idx = 0;
 
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
@@ -21,15 +22,14 @@ int is_palindrome(listint_t **head)
 	}
 	if (last->n == beg->n)
 	{
-		int i;
-
 		len--;
 		idx++;
-		while (len > idx)
+		while (idx < len && idx != len)
 		{
-			beg = beg->next;
+			int i;
+
 			last = beg;
-			for (i = idx; i < len; i++)
+			for (i = idx + 1; i < len; i++)
 				last = last->next;
 			idx++;
 			len--;
@@ -37,8 +37,6 @@ int is_palindrome(listint_t **head)
 			{
 				continue;
 			}
-			if (last->n != beg->n)
-				break;
 		}
 		if (idx > len || idx == len)
 			return (1);
