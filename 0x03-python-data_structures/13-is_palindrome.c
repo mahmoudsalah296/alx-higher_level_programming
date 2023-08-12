@@ -31,14 +31,12 @@ int is_palindrome(listint_t **head)
 			last = beg;
 			for (i = idx + 1; i < len; i++)
 				last = last->next;
-			if (last->n == beg->n)
-			{
-				idx++;
-				len--;
-				continue;
-			}
 			idx++;
 			len--;
+			if (last->n == beg->n)
+			{
+				continue;
+			}
 		}
 		if (idx > len || idx == len)
 			return (1);
