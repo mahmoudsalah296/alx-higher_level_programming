@@ -19,8 +19,6 @@ int is_palindrome(listint_t **head)
 		len++;
 		tail = tail->next;
 	}
-	if ((*head)->n != tail->n)
-		return (0);
 	idx += 1;
 	len -= 1;
 	while (len > idx)
