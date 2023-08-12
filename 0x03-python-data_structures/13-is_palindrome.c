@@ -37,6 +37,8 @@ int is_palindrome(listint_t **head)
 			{
 				continue;
 			}
+			if (last->n != beg->n)
+				break;
 		}
 		if (idx > len || idx == len)
 			return (1);
