@@ -21,20 +21,19 @@ int is_palindrome(listint_t **head)
 	}
 	if (last->n == beg->n)
 	{
-		len--;
-		idx++;
+		int i;
 		while (idx < len)
 		{
-			int i;
-
+			len--;
+			idx++;
 			beg = beg->next;
 			last = beg;
 
 			for (i = idx; i < len - 1; i++)
 				last = last->next;
-			idx++;
-			len--;
-			if (last->n != beg->n)
+			if (last->n == beg->n)
+				continue;
+			else
 				return (0);
 		}
 		return (1);
