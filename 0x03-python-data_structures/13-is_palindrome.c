@@ -25,14 +25,14 @@ int is_palindrome(listint_t **head)
 	len -= 1;
 	while (len > idx)
 	{
+		if (tmp->n != tail->n)
+			return (0);
 		tmp = tmp->next;
 		tail = tmp;
 		for (i = idx; i < len; i++)
 		{
 			tail = tail->next;
 		}
-		if (tmp->n != tail->n)
-			return (0);
 		idx++;
 		len--;
 	}
