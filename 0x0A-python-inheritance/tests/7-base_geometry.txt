@@ -10,7 +10,7 @@ Exception: area() is not implemented
 >>> b.area(1)
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
+TypeError: area() takes 1 positional argument but 2 were given
 
 
 >>> b.integer_validator("integer", 1)
@@ -32,7 +32,10 @@ Traceback (most recent call last):
 ...
 TypeError: bool must be an integer
 
-
+>>> b.integer_validator("bool", False)
+Traceback (most recent call last):
+...
+TypeError: bool must be an integer
 
 >>> b.integer_validator("float", 1.5)
 Traceback (most recent call last):
@@ -78,14 +81,14 @@ TypeError: bytearrays must be an integer
 >>> b.integer_validator()
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 >>> b.integer_validator("integer")
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 >>> b.integer_validator("integer", 1, 2)
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
