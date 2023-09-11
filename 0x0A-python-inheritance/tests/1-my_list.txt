@@ -32,5 +32,5 @@
 >>> del my_list
 >>> my_list = MyList([1, 2, 3, 4, 5])
 >>> my_list[0] = 10
->>> my_list.print_sorted()
-[2, 3, 4, 5, 10]
+>>> print(my_list)
+[10, 2, 3, 4, 5]
