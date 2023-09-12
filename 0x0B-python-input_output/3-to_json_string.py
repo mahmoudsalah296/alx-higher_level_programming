@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""from json module"""
+"""to json module"""
 import json
 
 
