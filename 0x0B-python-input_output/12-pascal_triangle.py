@@ -2,7 +2,7 @@
 """Module for pascal_triangle method."""
 
 
-def pascal_triangle (n):
+def pascal_triangle(n):
     """pascal triangle method"""
 
     init_list = [[1]]
