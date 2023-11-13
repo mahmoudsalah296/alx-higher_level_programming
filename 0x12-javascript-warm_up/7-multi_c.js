@@ -4,7 +4,7 @@
  * a script that prints x times “C is fun”
  */
 const process = require('process');
-arg = Number.parseInt(process.argv[2]);
+const arg = Number.parseInt(process.argv[2]);
 
 if (!process.argv[2]) {
   console.log('Missing number of occurrences');
