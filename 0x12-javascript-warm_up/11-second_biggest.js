@@ -2,22 +2,13 @@
 
 /* a script that searches the second biggest integer in the list of arguments */
 
-const process = require('process');
-if (!process.argv[2] || process.argv.length === 3) {
+const args = process.argv.slice(2);
+if (args.length === 0 || args.length === 1) {
   console.log(0);
-} else {
-  let biggest = process.argv[2];
-  let secondBiggest = process.argv[3];
-
-  for (let i = 2; i < process.argv.length; i++) {
-    if (process.argv[i] > biggest) {
-      const tmp = biggest;
-      biggest = process.argv[i];
-      secondBiggest = tmp;
-    }
-    else if (process.argv[i] > secondBiggest) {
-      secondBiggest = process.argv[i];
-    }
-  }
-  console.log(secondBiggest);
+}
+else {
+  args.sort(function (a, b) {
+    return b - a;
+  });
+  console.log(args[1]);
 }
