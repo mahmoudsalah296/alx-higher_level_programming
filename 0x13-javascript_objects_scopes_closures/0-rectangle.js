@@ -2,7 +2,6 @@
 
 /* class rectangle */
 class Rectangle {
-  constructor () { }
   /* anything */
 }
 
