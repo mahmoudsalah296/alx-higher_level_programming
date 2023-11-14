@@ -10,11 +10,12 @@ class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (!c) {
-      return super.print();
-    }
     for (let i = 0; i < this.width; i++) {
-      console.log(c.repeat(this.width));
+      if (c) {
+        console.log(c.repeat(this.width));
+      } else {
+        console.log('X'.repeat(this.width));
+      }
     }
   }
 }
