@@ -6,9 +6,6 @@ def find_peack_helper(array, lower, upper):
     """helper function"""
     mid = (lower + upper) // 2
 
-    if mid == lower or mid == upper:
-        return array[mid]
-
     if array[mid] > array[mid - 1] and array[mid] > array[mid + 1]:
         return array[mid]
     if array[mid + 1] > array[mid]:
