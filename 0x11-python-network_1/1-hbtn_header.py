@@ -3,7 +3,7 @@
 
 
 import sys
-import urllib.request
+import urllib
 
 with urllib.request.urlopen(sys.argv[1]) as resp:
     print(resp.headers.get("X-Request-Id"))
