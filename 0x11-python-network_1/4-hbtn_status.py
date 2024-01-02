@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """a script that fetches https://alx-intranet.hbtn.io/status"""
 
-
 import requests
 
 response = requests.get("https://alx-intranet.hbtn.io/status")
