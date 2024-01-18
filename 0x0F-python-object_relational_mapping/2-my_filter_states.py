@@ -14,7 +14,9 @@ if __name__ == "__main__":
     """.format(
         sys.argv[4]
     )
-    conn = MySQLdb.connect(user=username, db=db_name, host="localhost", port=3306)
+    conn = MySQLdb.connect(
+        user=username, passwd=passwd, db=db_name, host="localhost", port=3306
+    )
     cursor = conn.cursor()
     cursor.execute(query)
     for row in cursor.fetchall():
