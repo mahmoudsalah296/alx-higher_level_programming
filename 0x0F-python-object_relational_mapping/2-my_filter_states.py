@@ -9,7 +9,7 @@ if __name__ == "__main__":
     username, passwd, db_name = sys.argv[1:4]
 
     query = """SELECT * FROM states
-        WHERE name LIKE '{}'
+        WHERE name LIKE BINARY '{}'
         ORDER BY states.id
     """.format(
         sys.argv[4]
