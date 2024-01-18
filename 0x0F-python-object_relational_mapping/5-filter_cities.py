@@ -19,6 +19,6 @@ if __name__ == "__main__":
     cursor = conn.cursor()
     cursor.execute(query, (state,))
     for row in cursor.fetchall():
-        print(row)
+        print(row, sep=", ")
     cursor.close()
     conn.close()
