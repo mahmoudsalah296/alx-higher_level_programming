@@ -7,8 +7,8 @@ import sys
 if __name__ == "__main__":
     username, passwd, db_name = sys.argv[1:4]
 
-    query = """SELECT * FROM cities
-        ORDER BY cities.id
+    query = """SELECT cities.id, cities.name, states.name FROM
+                cities INNER JOIN states ON states.id=cities.state_id
     """
     conn = MySQLdb.connect(
         user=username, passwd=passwd, db=db_name, host="localhost", port=3306
