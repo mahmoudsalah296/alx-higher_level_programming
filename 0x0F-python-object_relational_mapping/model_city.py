@@ -20,4 +20,3 @@ class City(Base):
         ForeignKey("states.id"),
         nullable=False
     )
-    
